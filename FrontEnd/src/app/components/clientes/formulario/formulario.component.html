@@ -1,0 +1,71 @@
+<form [formGroup]="form" (ngSubmit)="idCliente !== 0 ? editarCliente() : agregarCliente()" class="row g-3">
+    <div class="col-md-6">
+        <label for="inputName" class="form-label">Nombre</label>
+        <input formControlName="nombre" type="text" class="form-control" id="inputName">
+    </div>
+    <div class="col-md-6">
+        <label for="inputLastName" class="form-label">Apellido</label>
+        <input type="text" formControlName="apellido" class="form-control" id="inputLastName">
+    </div>
+    <div class="col-12">
+        <label for="inputIdentification" class="form-label">Identificacion</label>
+        <input formControlName="identificacion" type="text" class="form-control" id="inputLastName">
+    </div>
+    <div class="col-md-3">
+        <label for="inputAddress" class="form-label">Edad</label>
+        <input formControlName="edad" type="number" min="0" class="form-control" id="inputAddress" placeholder="Edad">
+    </div>
+    <div class="col-md-9">
+        <label for="inputGender" class="form-label">Genero</label>
+        <input formControlName="genero" type="text" class="form-control" id="inputGender" placeholder="Genero">
+    </div>
+    <div class="col-sm-6">
+        <div class="form-check">
+            <input formControlName="diabetico" class="form-check-input" type="checkbox" id="inputDiabetic">
+            <label class="form-check-label" for="inputDiabetic">
+                ¿Es diabetico?
+            </label>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-check">
+            <input formControlName="maneja" class="form-check-input" type="checkbox" id="inputHasLicence">
+            <label class="form-check-label" for="inputHasLicence">
+                ¿Maneja?
+            </label>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-check">
+            <input formControlName="usaLentes" class="form-check-input" type="checkbox" id="inputUseGlasses">
+            <label class="form-check-label" for="inputUseGlasses">
+                ¿Usa anteojos?
+            </label>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-check">
+            <input formControlName="isActivo" class="form-check-input" type="checkbox" id="inputUseGlasses">
+            <label class="form-check-label" for="inputUseGlasses">
+                ¿Esta activo?
+            </label>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <label for="inputDiseases">Enfermedades</label>
+        <textarea formControlName="enfermedades" name="diseases" class="form-control" id="inputDiseases"
+            placeholder="Si padece alguna enfermedad escribala aqui"></textarea>
+    </div>
+    <div class="col-12">
+        <label for="inputAditionalAttr">Atributos adicionales</label>
+        <textarea formControlName="atributosAdicionales" name="AditionalAttr" class="form-control"
+            id="inputAditionalAttr" placeholder="Atributos adicionales"></textarea>
+    </div>
+    <div class="col-6">
+        <button type="reset" class="btn btn-outline-danger w-100">Cancelar</button>
+    </div>
+    <div class="col-6">
+        <button type="submit" class="btn btn-success w-100">{{ idCliente !== 0 ? "Editar" : "Agregar" }}</button>
+    </div>
+</form>

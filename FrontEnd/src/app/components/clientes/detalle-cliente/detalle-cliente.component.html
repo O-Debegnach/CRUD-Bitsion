@@ -1,0 +1,40 @@
+<div class="container border border-dark rounded p-3 shadow" *ngIf="cliente != null">
+    <h4>{{cliente.lastName}}, {{cliente.name}}</h4>
+    <h6>Identificacion: {{cliente.identification}}</h6>
+    <div class="row">
+        <div class="col-4">
+            <span>Edad: {{cliente.age}}</span>
+        </div>
+        <div class="col-6">
+            <span>Genero: {{cliente.gender}}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <span>¿Es diabetico?: {{cliente.diabetic ? "Si" : "No"}}</span>
+        </div>
+        <div class="col-6">
+            <span>¿Usa Lentes?: {{cliente.useGlasses ? "Si" : "No"}}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <span>¿Maneja?: {{cliente.hasLicense ? "Si" : "No"}}</span>
+        </div>
+        <div class="col-6">
+            <span>¿Esta activo?: {{cliente.isActive ? "Si" : "No"}}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>Enfermedades: {{cliente.diseases != '' ? cliente.diseases : "No padece"}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>Atributos adicionales: {{cliente.aditionalAttributes != ''
+                ? cliente.aditionalAttributes :
+                'No posee'}}</p>
+        </div>
+    </div>
+</div>

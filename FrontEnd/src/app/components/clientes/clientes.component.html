@@ -1,0 +1,19 @@
+<div class="jumbotron">
+    <h1 class="display-4 text-center">Ficticia S.A.</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-5">
+            <h4 class="text-center mb-2">Agregar Cliente</h4>
+            <app-formulario></app-formulario>
+        </div>
+        <div class="col-md-7 mt-5 mt-md-0">
+            <div class="row h-50 align-content-start">
+                <h4 class="text-center">Listado de clientes</h4>
+                <app-listado-clientes></app-listado-clientes>
+            </div>
+            <div class="row h-50">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

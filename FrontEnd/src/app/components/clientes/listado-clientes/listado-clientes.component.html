@@ -1,0 +1,27 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Identificacion</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <app-cliente *ngFor="cliente of clientes"></app-cliente> -->
+        <tr *ngFor="let cliente of clienteService.clientes">
+            <td>{{cliente.identification}}</td>
+            <td>{{cliente.name}}</td>
+            <td>{{cliente.lastName}}</td>
+            <td>{{cliente.age}}</td>
+            <td>
+                <a [routerLink]="['/customers', cliente.id]"><i class="far fa-eye text-info me-2"></i></a>
+                <i class="far fa-edit text-info me-2" style="cursor: pointer;" (click)="editar(cliente)"></i>
+                <i class="far fa-trash-alt text-danger" style="cursor: pointer;"
+                    (click)="eliminarCliente(cliente.id)"></i>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
